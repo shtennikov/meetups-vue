@@ -18,6 +18,7 @@ module.exports = {
         'no-console': ['warn', { allow: ['warn', 'error', 'info'] }],
         'import/prefer-default-export': 'off',
         'import/no-extraneous-dependencies': 'off',
+        'import/no-unresolved': 'off',
         'max-lines-per-function': ['error', 40],
         'class-methods-use-this': 'off',
         '@typescript-eslint/lines-between-class-members': 'off',

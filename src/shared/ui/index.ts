@@ -6,5 +6,16 @@ import UiTab from '@shared/ui/UiTab.vue';
 import UiTabs from '@shared/ui/UiTabs.vue';
 import UiLink from '@shared/ui/UiLink.vue';
 import UiInput from '@shared/ui/UiInput.vue';
+import UiImageUploader from '@shared/ui/UiImageUploader.vue';
 
-export { UiButtonVue, UiCheckbox, UiIconVue, UiCard, UiTab, UiTabs, UiLink, UiInput };
+export {
+    UiButtonVue,
+    UiCheckbox,
+    UiIconVue,
+    UiCard,
+    UiTab,
+    UiTabs,
+    UiLink,
+    UiInput,
+    UiImageUploader,
+};

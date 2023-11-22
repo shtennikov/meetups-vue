@@ -24,7 +24,6 @@ module.exports = {
         '@typescript-eslint/lines-between-class-members': 'off',
         '@typescript-eslint/no-explicit-any': 'error',
         '@typescript-eslint/no-inferrable-types': 'error',
-        '@typescript-eslint/explicit-function-return-type': 'error',
         '@typescript-eslint/no-non-null-assertion': 'error',
         '@typescript-eslint/array-type': [
             'error',

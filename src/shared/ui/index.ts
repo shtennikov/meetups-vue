@@ -13,7 +13,8 @@ import UiButtonGroupItem from '@shared/ui/UiButtonGroupItem.vue';
 import UiButtonGroup from '@shared/ui/UiButtonGroup.vue';
 import UiDropdown from '@shared/ui/UiDropdown.vue';
 import UiContainer from '@shared/ui/UiContainer.vue';
-import UiAlert from './UiAlert.vue';
+import UiAlert from '@shared/ui/UiAlert.vue';
+import UiRadioGroup from '@shared/ui/UiRadioGroup.vue';
 
 export {
     UiButtonVue,
@@ -32,4 +33,5 @@ export {
     UiDropdown,
     UiContainer,
     UiAlert,
+    UiRadioGroup,
 };

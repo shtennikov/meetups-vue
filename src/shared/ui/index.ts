@@ -9,6 +9,8 @@ import UiInput from '@shared/ui/UiInput.vue';
 import UiImageUploader from '@shared/ui/UiImageUploader.vue';
 import UiTransitionFadeVue from '@shared/ui/UiTransitionFade.vue';
 import UiTransitionGroupFade from '@shared/ui/UiTransitionGroupFade.vue';
+import UiButtonGroupItem from '@shared/ui/UiButtonGroupItem.vue';
+import UiButtonGroup from './UiButtonGroup.vue';
 
 export {
     UiButtonVue,
@@ -22,4 +24,6 @@ export {
     UiImageUploader,
     UiTransitionFadeVue,
     UiTransitionGroupFade,
+    UiButtonGroupItem,
+    UiButtonGroup,
 };

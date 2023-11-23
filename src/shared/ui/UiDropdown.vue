@@ -40,9 +40,10 @@
 <script setup lang="ts">
 import { computed, ref } from 'vue';
 import { useModelProxy } from '@shared/lib/composables/useModelProxy';
+import type { SelectionListRenderingOptions } from '@shared/types';
 
 interface IProps {
-    options: { value: string; text: string; icon?: string }[];
+    options: SelectionListRenderingOptions[];
     modelValue: string;
     title: string;
 }

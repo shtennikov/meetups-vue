@@ -12,6 +12,7 @@ import UiTransitionGroupFade from '@shared/ui/UiTransitionGroupFade.vue';
 import UiButtonGroupItem from '@shared/ui/UiButtonGroupItem.vue';
 import UiButtonGroup from '@shared/ui/UiButtonGroup.vue';
 import UiDropdown from '@shared/ui/UiDropdown.vue';
+import UiContainer from '@shared/ui/UiContainer.vue';
 
 export {
     UiButtonVue,
@@ -28,4 +29,5 @@ export {
     UiButtonGroupItem,
     UiButtonGroup,
     UiDropdown,
+    UiContainer,
 };

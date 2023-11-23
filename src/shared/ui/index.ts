@@ -15,6 +15,7 @@ import UiDropdown from '@shared/ui/UiDropdown.vue';
 import UiContainer from '@shared/ui/UiContainer.vue';
 import UiAlert from '@shared/ui/UiAlert.vue';
 import UiRadioGroup from '@shared/ui/UiRadioGroup.vue';
+import UiBadge from '@shared/ui/UiBadge.vue';
 
 export {
     UiButtonVue,
@@ -34,4 +35,5 @@ export {
     UiContainer,
     UiAlert,
     UiRadioGroup,
+    UiBadge,
 };

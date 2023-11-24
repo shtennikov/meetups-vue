@@ -17,6 +17,7 @@ import UiAlert from '@shared/ui/UiAlert.vue';
 import UiRadioGroup from '@shared/ui/UiRadioGroup.vue';
 import UiBadge from '@shared/ui/UiBadge.vue';
 import UiInputDate from '@shared/ui/UiInputDate.vue';
+import UiCalendarEvent from '@shared/ui/UiCalendarEvent.vue';
 
 export {
     UiButtonVue,
@@ -38,4 +39,5 @@ export {
     UiRadioGroup,
     UiBadge,
     UiInputDate,
+    UiCalendarEvent,
 };

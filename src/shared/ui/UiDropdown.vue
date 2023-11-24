@@ -39,7 +39,7 @@
 
 <script setup lang="ts">
 import { computed, ref } from 'vue';
-import { useModelProxy } from '@shared/lib/composables/useModelProxy';
+import { useModelProxy } from '@shared/lib/composables';
 import type { SelectionListRenderingOptions } from '@shared/types';
 
 interface IProps {

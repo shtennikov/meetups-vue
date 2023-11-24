@@ -33,8 +33,8 @@ import { ref } from 'vue';
 import dayjs from 'dayjs';
 import weekday from 'dayjs/plugin/weekday';
 import weekOfYear from 'dayjs/plugin/weekOfYear';
-import { useCalendar } from '@shared/lib/composables/useCalendar';
-import UiCalendarControls from '@shared/ui/UiCalendarControls.vue';
+import { useCalendar } from '@shared/lib/composables';
+import { UiCalendarControls } from '@shared/ui';
 
 dayjs.extend(weekday);
 dayjs.extend(weekOfYear);

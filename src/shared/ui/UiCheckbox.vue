@@ -7,7 +7,7 @@
 </template>
 
 <script setup lang="ts">
-import { useModelProxy } from '@shared/lib/composables/useModelProxy';
+import { useModelProxy } from '@shared/lib/composables';
 
 defineProps({
     modelValue: {

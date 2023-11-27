@@ -4,4 +4,9 @@ export const routes = [
         path: '/',
         component: () => import('../../pages/meetups/PageMeetups.vue'),
     },
+    {
+        name: 'not-found',
+        path: '/:catchAll(.*)*',
+        component: () => import('../../pages/not-found/PageNotFound.vue'),
+    },
 ];

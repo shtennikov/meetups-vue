@@ -19,7 +19,8 @@ import UiBadge from '@shared/ui/UiBadge.vue';
 import UiInputDate from '@shared/ui/UiInputDate.vue';
 import UiCalendarEvent from '@shared/ui/UiCalendarEvent.vue';
 import UiCalendarView from '@shared/ui/UiCalendarView.vue';
-import UiCalendarControls from './UiCalendarControls.vue';
+import UiCalendarControls from '@shared/ui/UiCalendarControls.vue';
+import UiForm from '@shared/ui/UiForm.vue';
 
 export {
     UiButtonVue,
@@ -44,4 +45,5 @@ export {
     UiCalendarEvent,
     UiCalendarView,
     UiCalendarControls,
+    UiForm,
 };

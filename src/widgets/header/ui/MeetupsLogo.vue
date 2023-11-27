@@ -1,0 +1,24 @@
+<template>
+    <h1 class="logo">
+        <RouterLink :to="{ name: 'meetups' }" class="logo__link">
+            <img src="./logo.svg" alt="Meetups" class="logo__image" width="174" height="30" />
+        </RouterLink>
+    </h1>
+</template>
+
+<script setup lang="ts"></script>
+
+<style scoped>
+.logo,
+.logo__link {
+    display: block;
+    font-weight: 900;
+    font-size: 34px;
+    line-height: 30px;
+    text-align: center;
+    margin: 0 0 24px;
+    text-transform: uppercase;
+    color: var(--body-color);
+    text-decoration: none;
+}
+</style>

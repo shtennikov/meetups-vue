@@ -1,51 +1,24 @@
-import UiButtonVue from '@shared/ui/UiButton.vue';
-import UiCheckbox from '@shared/ui/UiCheckbox.vue';
-import UiIcon from '@shared/ui/UiIcon.vue';
-import UiCard from '@shared/ui/UiCard.vue';
-import UiTab from '@shared/ui/UiTab.vue';
-import UiTabs from '@shared/ui/UiTabs.vue';
-import UiLink from '@shared/ui/UiLink.vue';
-import UiInput from '@shared/ui/UiInput.vue';
-import UiImageUploader from '@shared/ui/UiImageUploader.vue';
-import UiTransitionFadeVue from '@shared/ui/UiTransitionFade.vue';
-import UiTransitionGroupFade from '@shared/ui/UiTransitionGroupFade.vue';
-import UiButtonGroupItem from '@shared/ui/UiButtonGroupItem.vue';
-import UiButtonGroup from '@shared/ui/UiButtonGroup.vue';
-import UiDropdown from '@shared/ui/UiDropdown.vue';
-import UiContainer from '@shared/ui/UiContainer.vue';
-import UiAlert from '@shared/ui/UiAlert.vue';
-import UiRadioGroup from '@shared/ui/UiRadioGroup.vue';
-import UiBadge from '@shared/ui/UiBadge.vue';
-import UiInputDate from '@shared/ui/UiInputDate.vue';
-import UiCalendarEvent from '@shared/ui/UiCalendarEvent.vue';
-import UiCalendarView from '@shared/ui/UiCalendarView.vue';
-import UiCalendarControls from '@shared/ui/UiCalendarControls.vue';
-import UiForm from '@shared/ui/UiForm.vue';
-import UiFormGroup from '@shared/ui/UiFormGroup.vue';
-
-export {
-    UiButtonVue,
-    UiCheckbox,
-    UiIcon,
-    UiCard,
-    UiTab,
-    UiTabs,
-    UiLink,
-    UiInput,
-    UiImageUploader,
-    UiTransitionFadeVue,
-    UiTransitionGroupFade,
-    UiButtonGroupItem,
-    UiButtonGroup,
-    UiDropdown,
-    UiContainer,
-    UiAlert,
-    UiRadioGroup,
-    UiBadge,
-    UiInputDate,
-    UiCalendarEvent,
-    UiCalendarView,
-    UiCalendarControls,
-    UiForm,
-    UiFormGroup,
-};
+export * as UiButtonVue from '@shared/ui/UiButton.vue';
+export * as UiCheckbox from '@shared/ui/UiCheckbox.vue';
+export * as UiIcon from '@shared/ui/UiIcon.vue';
+export * as UiCard from '@shared/ui/UiCard.vue';
+export * as UiTab from '@shared/ui/UiTab.vue';
+export * as UiTabs from '@shared/ui/UiTabs.vue';
+export * as UiLink from '@shared/ui/UiLink.vue';
+export * as UiInput from '@shared/ui/UiInput.vue';
+export * as UiImageUploader from '@shared/ui/UiImageUploader.vue';
+export * as UiTransitionFadeVue from '@shared/ui/UiTransitionFade.vue';
+export * as UiTransitionGroupFade from '@shared/ui/UiTransitionGroupFade.vue';
+export * as UiButtonGroupItem from '@shared/ui/UiButtonGroupItem.vue';
+export * as UiButtonGroup from '@shared/ui/UiButtonGroup.vue';
+export * as UiDropdown from '@shared/ui/UiDropdown.vue';
+export * as UiContainer from '@shared/ui/UiContainer.vue';
+export * as UiAlert from '@shared/ui/UiAlert.vue';
+export * as UiRadioGroup from '@shared/ui/UiRadioGroup.vue';
+export * as UiBadge from '@shared/ui/UiBadge.vue';
+export * as UiInputDate from '@shared/ui/UiInputDate.vue';
+export * as UiCalendarEvent from '@shared/ui/UiCalendarEvent.vue';
+export * as UiCalendarView from '@shared/ui/UiCalendarView.vue';
+export * as UiCalendarControls from '@shared/ui/UiCalendarControls.vue';
+export * as UiForm from '@shared/ui/UiForm.vue';
+export * as UiFormGroup from '@shared/ui/UiFormGroup.vue';

@@ -54,7 +54,7 @@ const emit = defineEmits<{
     'update:modelValue': [value: string];
 }>();
 
-const modelProxy = useModelProxy();
+const modelProxy = useModelProxy<typeof props.modelValue>();
 const isMenuOpen = ref(false);
 const selectOption = (value: string): void => {
     isMenuOpen.value = false;

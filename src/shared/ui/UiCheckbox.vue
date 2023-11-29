@@ -9,7 +9,7 @@
 <script setup lang="ts">
 import { useModelProxy } from '@shared/lib/composables';
 
-defineProps({
+const props = defineProps({
     modelValue: {
         type: [Boolean, Array, Set],
         required: true,
@@ -22,7 +22,7 @@ defineOptions({
     inheritAttrs: false,
 });
 
-const modelValueProxy = useModelProxy();
+const modelValueProxy = useModelProxy<typeof props.modelValue>();
 </script>
 
 <style scoped>

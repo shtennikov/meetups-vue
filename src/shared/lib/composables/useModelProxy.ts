@@ -1,18 +1,17 @@
-/* eslint-disable @typescript-eslint/explicit-function-return-type */
-// @ts-nocheck
 import { computed, getCurrentInstance, toRef } from 'vue';
 
-export function useModelProxy() {
-    const modelValue = toRef(getCurrentInstance().props);
-    const { emit } = getCurrentInstance();
+export function useModelProxy<T>() {
+    const instance = getCurrentInstance();
+    const modelValue = toRef(instance?.props.modelValue);
+    const emit = instance?.emit;
 
-    return computed({
-        get() {
-            return modelValue.value;
+    return computed<T>({
+        get(): T {
+            return modelValue.value as T;
         },
 
         set(value) {
-            emit('update:modelValue', value);
+            emit?.('update:modelValue', value);
         },
     });
 }

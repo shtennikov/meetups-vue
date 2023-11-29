@@ -11,7 +11,7 @@
 withDefaults(
     defineProps<{
         inline: boolean;
-        label: string;
+        label?: string;
     }>(),
     { inline: false },
 );

@@ -30,5 +30,7 @@ export interface Meetup {
     dateIso: string;
     organizer: string;
     place: string;
+    organizing: boolean;
+    attending: boolean;
     agenda: Agenda[];
 }

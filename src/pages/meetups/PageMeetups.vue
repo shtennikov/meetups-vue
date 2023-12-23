@@ -16,7 +16,7 @@ import { meetupsRepository } from '@shared/api';
 import { UiContainer, UiAlert } from '@shared/ui';
 import { MeetupsFilters } from '@widgets/meetups-filters';
 import { useFilteredMeetups } from '@pages/meetups/model/useFilteredMeetups';
-import MeetupsList from './ui/MeetupsList.vue';
+import { MeetupsList } from '@entities/meetups-list';
 
 const ALERT_TEXT = 'Загрузка...';
 

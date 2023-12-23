@@ -5,7 +5,7 @@
 </template>
 
 <script setup lang="ts">
-withDefaults(defineProps<{ text: string }>(), { text: 'Error...' });
+withDefaults(defineProps<{ text?: string }>(), { text: 'Error...' });
 </script>
 
 <style scoped>

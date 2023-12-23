@@ -1,10 +1,9 @@
 <template>
     <UiContainer>
-        <!-- TODO filter data emit -->
-        <MeetupsFilters />
+        <MeetupsFilters v-model="filterOptions" />
         <template v-if="meetups">
             <!-- TODO add calendar view -->
-            <MeetupsList :meetups="meetups" />
+            <MeetupsList :meetups="filteredMeetups" />
         </template>
         <UiAlert v-else>{{ ALERT_TEXT }}</UiAlert>
     </UiContainer>
@@ -12,15 +11,23 @@
 
 <script setup lang="ts">
 import { ref } from 'vue';
-import type { Meetup } from '@shared/types';
+import type { Meetup, Filters, View } from '@shared/types';
 import { meetupsRepository } from '@shared/api';
 import { UiContainer, UiAlert } from '@shared/ui';
 import { MeetupsFilters } from '@widgets/meetups-filters';
+import { useFilteredMeetups } from '@pages/meetups/model/useFilteredMeetups';
 import MeetupsList from './ui/MeetupsList.vue';
 
 const ALERT_TEXT = 'Загрузка...';
-// TODO add filteredMeetups
+
 const meetups = ref<Meetup[] | null>(null);
+const filterOptions = ref<Filters & { view: View }>({
+    date: 'all',
+    participation: 'all',
+    search: '',
+    view: 'list',
+});
+const filteredMeetups = useFilteredMeetups(meetups, filterOptions);
 
 meetupsRepository.getMeetups().then((data) => {
     meetups.value = data;

@@ -1,31 +1,27 @@
 <template>
     <div class="filters-panel">
         <div class="filters-panel__col">
-            <!-- filter-by-date -->
-            <MeetupsFilterByDate v-model="filter.date" />
+            <MeetupsFilterByDate v-model="modelProxy.date" />
         </div>
         <div class="filters-panel__col">
-            <!-- search -->
-            <MeetupsSearch v-model="filter.search" />
-            <!-- toggle-view -->
-            <MeetupsViewToggle v-model="view" />
+            <MeetupsSearch v-model="modelProxy.search" />
+            <MeetupsViewToggle v-model="modelProxy.view" />
         </div>
     </div>
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue';
 import { MeetupsFilterByDate } from '@features/filter-by-date';
 import { MeetupsSearch } from '@features/search';
 import { MeetupsViewToggle } from '@features/toggle-view';
+import type { Filters, View } from '@shared/types';
+import { useModelProxy } from '@shared/lib/composables';
 
-const filter = ref({
-    date: 'all',
-    participation: 'all',
-    search: '',
-});
+const props = defineProps<{
+    modelValue: Filters & { view: View };
+}>();
 
-const view = ref<'list' | 'calendar'>('list');
+const modelProxy = useModelProxy<typeof props.modelValue>();
 </script>
 
 <style scoped>

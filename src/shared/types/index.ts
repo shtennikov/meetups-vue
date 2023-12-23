@@ -34,3 +34,11 @@ export interface Meetup {
     attending: boolean;
     agenda: Agenda[];
 }
+
+export interface Filters {
+    date: 'all' | 'past' | 'future';
+    participation: 'all' | 'organizing' | 'attending';
+    search: string;
+}
+
+export type View = 'list' | 'calendar';

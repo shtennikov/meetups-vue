@@ -34,11 +34,12 @@ export function useFilteredMeetups(
 
         // TODO filter by participation
         if (cache?.search !== search) {
+            const loweredSearch = search.toLowerCase();
             filteredMeetups = filteredMeetups.filter(
                 (meetup) =>
-                    meetup.title.includes(search) ||
-                    meetup.organizer.includes(search) ||
-                    meetup.place.includes(search),
+                    meetup.title.toLowerCase().includes(loweredSearch) ||
+                    meetup.organizer.toLowerCase().includes(loweredSearch) ||
+                    meetup.place.toLowerCase().includes(loweredSearch),
             );
         }
 

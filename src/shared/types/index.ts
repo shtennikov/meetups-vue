@@ -36,8 +36,8 @@ export interface Meetup {
 }
 
 export interface Filters {
-    date: 'all' | 'past' | 'future';
-    participation: 'all' | 'organizing' | 'attending';
+    date: string;
+    participation: string;
     search: string;
 }
 

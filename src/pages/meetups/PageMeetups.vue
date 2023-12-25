@@ -2,7 +2,6 @@
     <UiContainer>
         <MeetupsFilters v-model="filterOptions" />
         <template v-if="meetups">
-            <!-- TODO add query to URL -->
             <component
                 :is="meetupsViewComponent"
                 v-if="filteredMeetups.length"
@@ -16,23 +15,26 @@
 
 <script setup lang="ts">
 import { computed, ref } from 'vue';
-import type { Meetup, FilterOptions } from '@shared/types';
+import type { Meetup } from '@shared/types';
 import { meetupsRepository } from '@shared/api';
 import { UiContainer, UiAlert } from '@shared/ui';
 import { MeetupsFilters } from '@widgets/meetups-filters';
 import { useFilteredMeetups } from '@pages/meetups/model/useFilteredMeetups';
+import { useQuerySync } from '@pages/meetups/model/useQuerySync';
 import { MeetupsList } from '@entities/meetups-list';
 import { MeetupsCalendar } from '@entities/meetups-calendar';
+import { useRouter, type LocationQuery } from 'vue-router';
 
 const ALERT_TEXT = 'Загрузка...';
 const ALERT_TEXT_EMPTY = 'Митапов по заданным условиям не найдено...';
 
+const router = useRouter();
+const props = defineProps<{ query: LocationQuery }>();
+const { filterOptions } = useQuerySync(router, props);
+
 const meetups = ref<Meetup[] | null>(null);
-const filterOptions = ref<FilterOptions>({
-    date: 'all',
-    participation: 'all',
-    search: '',
-    view: 'list',
+meetupsRepository.getMeetups().then((data) => {
+    meetups.value = data;
 });
 const filteredMeetups = useFilteredMeetups(meetups, filterOptions);
 
@@ -41,10 +43,6 @@ const viewComponents = {
     calendar: MeetupsCalendar,
 };
 const meetupsViewComponent = computed(() => viewComponents[filterOptions.value.view]);
-
-meetupsRepository.getMeetups().then((data) => {
-    meetups.value = data;
-});
 </script>
 
 <style scoped></style>

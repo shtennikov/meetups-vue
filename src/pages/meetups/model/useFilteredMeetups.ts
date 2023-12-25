@@ -1,4 +1,4 @@
-import type { Filters, Meetup, View } from '@shared/types';
+import type { FilterOptions, Filters, Meetup } from '@shared/types';
 import { computed, type ComputedRef, type Ref } from 'vue';
 
 let cache: Filters | null = null;
@@ -6,7 +6,7 @@ let cache: Filters | null = null;
 // eslint-disable-next-line max-lines-per-function
 export function useFilteredMeetups(
     meetups: Ref<Meetup[] | null>,
-    filterOptions: Ref<Filters & { view: View }>,
+    filterOptions: Ref<FilterOptions>,
 ): ComputedRef<Meetup[]> {
     return computed(() => {
         const { search, date, participation } = filterOptions.value;

@@ -16,7 +16,7 @@
 
 <script setup lang="ts">
 import { computed, ref } from 'vue';
-import type { Meetup, Filters, View } from '@shared/types';
+import type { Meetup, FilterOptions } from '@shared/types';
 import { meetupsRepository } from '@shared/api';
 import { UiContainer, UiAlert } from '@shared/ui';
 import { MeetupsFilters } from '@widgets/meetups-filters';
@@ -28,7 +28,7 @@ const ALERT_TEXT = 'Загрузка...';
 const ALERT_TEXT_EMPTY = 'Митапов по заданным условиям не найдено...';
 
 const meetups = ref<Meetup[] | null>(null);
-const filterOptions = ref<Filters & { view: View }>({
+const filterOptions = ref<FilterOptions>({
     date: 'all',
     participation: 'all',
     search: '',

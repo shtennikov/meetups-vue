@@ -14,11 +14,11 @@
 import { MeetupsFilterByDate } from '@features/filter-by-date';
 import { MeetupsSearch } from '@features/search';
 import { MeetupsViewToggle } from '@features/toggle-view';
-import type { Filters, View } from '@shared/types';
+import type { FilterOptions } from '@shared/types';
 import { useModelProxy } from '@shared/lib/composables';
 
 const props = defineProps<{
-    modelValue: Filters & { view: View };
+    modelValue: FilterOptions;
 }>();
 
 const modelProxy = useModelProxy<typeof props.modelValue>();

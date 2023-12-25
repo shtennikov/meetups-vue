@@ -42,3 +42,5 @@ export interface Filters {
 }
 
 export type View = 'list' | 'calendar';
+
+export type FilterOptions = Filters & { view: View };

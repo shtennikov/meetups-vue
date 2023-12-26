@@ -23,7 +23,7 @@
 
 <script setup lang="ts">
 import { UiCard, UiBadge } from '@shared/ui';
-import MeetupInfo from '@entities/meetup-card/ui/MeetupInfo.vue';
+import { MeetupInfo } from '@entities/meetup-info';
 import type { Meetup } from '@/shared/types';
 
 defineProps<{ meetup: Meetup }>();

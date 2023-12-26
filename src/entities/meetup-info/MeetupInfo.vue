@@ -9,7 +9,7 @@
             {{ place }}
         </li>
         <li>
-            <UiIcon class="icon meetup-info__icon" icon="cal-sm" />
+            <UiIcon class="icon meetup-info__icon" icon="cal-lg" />
             <time :datetime="dateIso">{{ localDate }}</time>
         </li>
     </ul>

@@ -42,10 +42,10 @@ const ICONS = {
     user: User,
 } as const;
 
-type Types = keyof typeof ICONS;
+export type IconTypes = keyof typeof ICONS;
 
 interface IProps {
-    icon: Types;
+    icon: IconTypes;
 }
 </script>
 

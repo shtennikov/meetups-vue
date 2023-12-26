@@ -10,11 +10,21 @@ export interface DayData {
     isCurrentMonth: boolean;
 }
 
+export type AgendaTypes =
+    | 'registration'
+    | 'opening'
+    | 'talk'
+    | 'break'
+    | 'coffee'
+    | 'closing'
+    | 'afterparty'
+    | 'other';
+
 export interface Agenda {
     id: number;
     startsAt: string;
     endsAt: string;
-    type: string;
+    type: AgendaTypes;
     title: string | null;
     description: string | null;
     speaker: string | null;

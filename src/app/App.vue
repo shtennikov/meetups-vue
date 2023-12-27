@@ -5,7 +5,13 @@ import { MeetupsHeader } from '@widgets/header';
 <template>
     <div class="wrapper">
         <MeetupsHeader />
-        <RouterView />
+        <RouterView>
+            <template #default="{ Component }">
+                <KeepAlive v-if="Component" :max="3">
+                    <component :is="Component" />
+                </KeepAlive>
+            </template>
+        </RouterView>
     </div>
 </template>
 

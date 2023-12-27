@@ -1,14 +1,14 @@
 <template>
     <UiContainer>
         <MeetupsFilters v-model="filterOptions" />
-        <template v-if="meetups">
+        <KeepAlive v-if="meetups" include="MeetupsCalendar">
             <component
                 :is="meetupsViewComponent"
                 v-if="filteredMeetups.length"
                 :meetups="filteredMeetups"
             />
             <UiAlert v-else>{{ ALERT_TEXT_EMPTY }}</UiAlert>
-        </template>
+        </KeepAlive>
         <UiAlert v-else>{{ ALERT_TEXT }}</UiAlert>
     </UiContainer>
 </template>

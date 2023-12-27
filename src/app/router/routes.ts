@@ -11,6 +11,19 @@ export const routes = [
         }),
     },
     {
+        name: 'meetup',
+        path: '/meetups/:meetupId(\\d+)',
+        component: () => import('../../pages/meetup/PageMeetup.vue'),
+        props: (route: RouteLocation) => ({
+            meetupId: Number(route.params.meetupId),
+        }),
+        meta: {
+            showReturnToMeetups: true,
+            // TODO scroll behavior
+            // saveScrollPosition: true,
+        },
+    },
+    {
         name: 'not-found',
         path: '/:catchAll(.*)*',
         component: () => import('../../pages/not-found/PageNotFound.vue'),

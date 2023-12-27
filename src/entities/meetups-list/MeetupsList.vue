@@ -1,14 +1,13 @@
 <template>
     <UiTransitionGroupFade class="meetups-list">
         <li v-for="meetup in meetups" :key="meetup.id" class="meetups-list__item">
-            <!-- TODO Meetup Page link -->
-            <!-- <RouterLink
+            <RouterLink
                 :to="{ name: 'meetup', params: { meetupId: meetup.id } }"
                 class="meetups-list__item-link"
                 tabindex="0"
-            > -->
-            <MeetupCard :meetup="meetup" />
-            <!-- </RouterLink> -->
+            >
+                <MeetupCard :meetup="meetup" />
+            </RouterLink>
         </li>
     </UiTransitionGroupFade>
 </template>

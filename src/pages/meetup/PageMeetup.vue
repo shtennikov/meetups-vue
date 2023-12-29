@@ -1,20 +1,25 @@
 <template>
     <div class="page-meetups">
-        <template v-if="meetup">
-            <UiContainer>
-                <MeetupCover :title="meetup.title" :image="meetup.image" />
-                <MeetupInfo v-bind="meetup" />
+        <MeetupView v-if="meetup" :meetup="meetup">
+            <UiTabs>
+                <template #tabs>
+                    <UiTabsLink :to="{ name: 'meetup.description' }">Описание</UiTabsLink>
+                    <UiTabsLink :to="{ name: 'meetup.agenda' }">Программа</UiTabsLink>
+                </template>
+                <template #default>
+                    <RouterView :meetup="meetup" />
+                </template>
+            </UiTabs>
+        </MeetupView>
 
-                <UiTabs>
-                    <template #tabs>
-                        <UiTabsLink :to="{ name: 'meetup.description' }">Описание</UiTabsLink>
-                        <UiTabsLink :to="{ name: 'meetup.agenda' }">Программа</UiTabsLink>
-                    </template>
-                </UiTabs>
-
-                <RouterView :meetup="meetup" />
-            </UiContainer>
-        </template>
+        <!-- TODO при ошибке отображать сообщение -->
+        <!-- <UiContainer v-else-if="error">
+            <UiAlert>{{ error }}</UiAlert>
+        </UiContainer> -->
+        <!-- TODO отображается загрузка если зайти на митап -> назад -> снова на этот же митап  -->
+        <UiContainer v-else>
+            <UiAlert>Загрузка...</UiAlert>
+        </UiContainer>
     </div>
 </template>
 
@@ -22,9 +27,8 @@
 import { ref, watch } from 'vue';
 import type { Meetup } from '@shared/types';
 import { meetupsRepository } from '@shared/api';
-import { UiContainer, UiTabsLink, UiTabs } from '@shared/ui';
-import { MeetupCover } from '@entities/meetup-cover';
-import { MeetupInfo } from '@entities/meetup-info';
+import { UiAlert, UiContainer, UiTabsLink, UiTabs } from '@shared/ui';
+import { MeetupView } from '@widgets/meetup-view';
 import { onBeforeRouteLeave } from 'vue-router';
 
 const props = defineProps<{ meetupId: number }>();

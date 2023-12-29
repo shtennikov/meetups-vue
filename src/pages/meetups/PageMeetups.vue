@@ -30,6 +30,7 @@ const ALERT_TEXT_EMPTY = 'Митапов по заданным условиям 
 
 const router = useRouter();
 const props = defineProps<{ query: LocationQuery }>();
+// TODO баг при фильтре "Ожидаемые" и введенной строкепоиска выводит все найденные митапы, не зависимо от даты
 const { filterOptions } = useQuerySync(router, props);
 
 const meetups = ref<Meetup[] | null>(null);

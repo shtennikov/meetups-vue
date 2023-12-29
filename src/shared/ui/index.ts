@@ -4,6 +4,7 @@ import UiIcon from '@shared/ui/UiIcon.vue';
 import UiCard from '@shared/ui/UiCard.vue';
 import UiTab from '@shared/ui/UiTab.vue';
 import UiTabs from '@shared/ui/UiTabs.vue';
+import UiTabsLink from '@shared/ui/UiTabsLink.vue';
 import UiLink from '@shared/ui/UiLink.vue';
 import UiInput from '@shared/ui/UiInput.vue';
 import UiImageUploader from '@shared/ui/UiImageUploader.vue';
@@ -30,6 +31,7 @@ export {
     UiCard,
     UiTab,
     UiTabs,
+    UiTabsLink,
     UiLink,
     UiInput,
     UiImageUploader,

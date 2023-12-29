@@ -13,6 +13,7 @@ export const routes = [
     {
         name: 'meetup',
         path: '/meetups/:meetupId(\\d+)',
+        redirect: (to: RouteLocation) => ({ name: 'meetup.description', params: to.params }),
         component: () => import('../../pages/meetup/PageMeetup.vue'),
         props: (route: RouteLocation) => ({
             meetupId: Number(route.params.meetupId),
@@ -22,6 +23,19 @@ export const routes = [
             // TODO scroll behavior
             // saveScrollPosition: true,
         },
+        children: [
+            {
+                name: 'meetup.description',
+                path: '',
+                alias: 'description',
+                component: () => import('../../pages/meetup-description/PageMeetupDescription.vue'),
+            },
+            {
+                path: 'agenda',
+                name: 'meetup.agenda',
+                component: () => import('../../pages/meetup-agenda/PageMeetupAgenda.vue'),
+            },
+        ],
     },
     {
         name: 'not-found',

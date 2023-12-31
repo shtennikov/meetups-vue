@@ -31,11 +31,16 @@ export const routes = [
                 component: () => import('../../pages/meetup-description/PageMeetupDescription.vue'),
             },
             {
-                path: 'agenda',
                 name: 'meetup.agenda',
+                path: 'agenda',
                 component: () => import('../../pages/meetup-agenda/PageMeetupAgenda.vue'),
             },
         ],
+    },
+    {
+        name: 'login',
+        path: '/login',
+        component: () => import('../../pages/auth/PageAuth.vue'),
     },
     {
         name: 'not-found',

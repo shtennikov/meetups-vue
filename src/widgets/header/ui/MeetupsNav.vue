@@ -4,7 +4,7 @@
             &larr; Вернуться к списку
         </RouterLink>
         <!-- ! Ссылки гостя -->
-        <RouterLink to="/login" class="nav__link">Вход</RouterLink>
+        <RouterLink :to="{ name: 'login' }" class="nav__link">Вход</RouterLink>
         <RouterLink to="/register" class="nav__link">Регистрация</RouterLink>
         <!-- ! Ссылки авторизованного пользователя -->
         <!-- <RouterLink to="/meetups?participation=attending" class="nav__link"> Мои митапы </RouterLink>

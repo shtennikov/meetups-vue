@@ -1,4 +1,4 @@
-import UiButtonVue from '@shared/ui/UiButton.vue';
+import UiButton from '@shared/ui/UiButton.vue';
 import UiCheckbox from '@shared/ui/UiCheckbox.vue';
 import UiIcon from '@shared/ui/UiIcon.vue';
 import UiCard from '@shared/ui/UiCard.vue';
@@ -25,7 +25,7 @@ import UiForm from '@shared/ui/UiForm.vue';
 import UiFormGroup from '@shared/ui/UiFormGroup.vue';
 
 export {
-    UiButtonVue,
+    UiButton,
     UiCheckbox,
     UiIcon,
     UiCard,

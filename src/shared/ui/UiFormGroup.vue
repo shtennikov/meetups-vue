@@ -10,7 +10,7 @@
 <script setup lang="ts">
 withDefaults(
     defineProps<{
-        inline: boolean;
+        inline?: boolean;
         label?: string;
     }>(),
     { inline: false },
